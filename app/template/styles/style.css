@@ -361,11 +361,23 @@ a {
       margin-right: 47px; }
       .panel__nav li:last-of-type {
         margin-right: 0; }
+      .panel__nav li.select a:after {
+        width: 100%; }
     .panel__nav a {
       padding-bottom: 4px;
-      border-bottom: 2px solid transparent; }
-      .panel__nav a:hover {
-        border-color: white; }
+      position: relative; }
+      .panel__nav a:after {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 3px;
+        background: white;
+        left: 0;
+        bottom: -4px;
+        -webkit-transition: .3s;
+        transition: .3s; }
+      .panel__nav a:hover:after {
+        width: 100%; }
   .panel__button {
     float: right;
     margin-top: 2px; }

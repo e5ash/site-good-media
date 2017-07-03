@@ -209,11 +209,25 @@ a
 		
 			&:last-of-type
 				margin-right: 0
+			&.select
+				a
+					&:after
+						width: 100%
 		a
 			padding-bottom: 4px
-			border-bottom: 2px solid transparent
+			position: relative
+			&:after
+				position: absolute
+				content: ''
+				width: 0
+				height: 3px
+				background: white
+				left: 0
+				bottom: -4px
+				transition: .3s
 			&:hover
-				border-color: white
+				&:after
+					width: 100%
 	&__button
 		float: right
 		margin-top: 2px
