@@ -1,0 +1,11 @@
+@media screen and (max-height: 890px) {
+  .product_img-bottom .product__title {
+    margin-bottom: 5px; }
+  .product_img-bottom .product__desc {
+    margin-bottom: 20px; }
+  .product_img-bottom .product__img img {
+    width: 700px; } }
+
+@media screen and (max-width: 768px) {
+  .w2 .col, .w3 .col, .w4 .col, .w5 .col, .w6 .col {
+    width: 100%; } }

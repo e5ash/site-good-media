@@ -1,0 +1,19 @@
+@font-face {
+  src: url("../fonts/SF-UI-Display-Light.otf");
+  font-family: "San Francisco";
+  font-weight: 300; }
+
+@font-face {
+  src: url("../fonts/SF-UI-Display-Regular.ttf");
+  font-family: "San Francisco";
+  font-weight: 400; }
+
+@font-face {
+  src: url("../fonts/SF-UI-Display-Medium.otf");
+  font-family: "San Francisco";
+  font-weight: 500; }
+
+@font-face {
+  src: url("../fonts/SF-UI-Display-Bold.otf");
+  font-family: "San Francisco";
+  font-weight: 700; }

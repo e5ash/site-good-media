@@ -1,0 +1,540 @@
+@import url('../libs/fullpage.js/jquery.fullPage.css')
+@import url('../libs/fancybox/dist/jquery.fancybox.min.css')
+@import url('../libs/slick-carousel/slick/slick.css')
+@import url('../libs/slick-carousel/slick/slick-theme.css')
+@import "sprite.sass"
+@import "grid.sass"
+@import "fonts.sass"
+
+$color-1: #24242c
+$font-size: 16px
+$font-family-1: 'San Francisco', sans-serif
+$transition-speed: .3s
+
+*
+	margin: 0
+	padding: 0
+	border: 0
+	box-sizing: border-box
+
+body
+	font-size: $font-size
+	font-family: $font-family-1
+	color: $color-1
+	background: white
+	box-sizing: border-box
+
+body, html
+	overflow: hidden !important
+
+h1, h2, h3, h4, h5, h6
+	font-size: inherit
+	font-weight: inherit
+
+
+ul
+	font-size: 0
+	li
+		display: inline-block
+		list-style-type: none
+
+
+span
+	position: relative
+	display: inline-block
+
+
+a
+	color: $color-1
+	text-decoration: none
+	border-bottom: 1px solid transparent
+	transition: $transition-speed
+
+::placeholder
+	color: #777777
+
+.input
+	display: block
+	font-size: 14px
+	font-weight: 300
+	color: $color-1
+	font-family: $font-family-1 
+	border: 1px solid #d1d1d1
+	width: 100%
+	line-height: 54px
+	padding-left: 24px
+	padding-right: 24px
+	border-radius: 30px
+	transition: border-color.3s
+	&:focus
+		border-color: #2D46CD
+
+.button
+	display: block
+	font-size: 14px
+	transition: background .3s, color .3s
+	text-align: center
+	cursor: pointer
+	transition: .3s
+	&_transparent
+		line-height: 40px
+		border: 1px solid white
+		background-color: transparent
+		border-radius: 30px
+		padding-left: 30px
+		padding-right: 30px
+		&:hover
+			background: white
+			color: $color-1
+	&_yellow
+		padding: 19px 48px
+		background-image: linear-gradient(263deg, #ffd013 0%, #ef8f31 99%, #ef8f31 100%)
+		border-radius: 40px
+		font-weight: 600
+		color: white
+		text-transform: uppercase
+		&:hover
+			background: #ef8f31
+	&_shadow-blue
+		box-shadow: 0 16px 43px rgba(25, 40, 134, 0.48)
+	&_shadow-red
+		box-shadow: 0 16px 43px rgba(126, 17, 59, 0.48)
+
+	&_shadow-black
+		box-shadow: 0 16px 43px rgba(30, 62, 11, 0.48)
+
+	&_shadow-yellow
+		box-shadow: 0 16px 43px rgba(253, 200, 23, 0.27)
+	&:hover
+		box-shadow: none
+
+
+.input, .button, .textarea
+	outline: none
+
+
+
+
+
+.icon
+	display: inline-block
+	vertical-align: middle
+
+.popups
+	display: none
+
+.popup
+	display: none
+	width: 440px
+	background: white
+	border-radius: 6px
+	padding: 60px 27px 54px
+	text-align: center
+	.fancybox-close-small
+		top: 18px
+		right: 26px
+		transition: .3s
+		@include sprite($close)
+		&:after
+			display: none
+		&:hover
+			transform: rotate(90deg)
+	&__title
+		font-size: 28px
+		font-weight: 300
+		margin-bottom: 19px
+	&__desc
+		font-weight: 300
+		line-height: 22px
+		margin-bottom: 35px
+		color: #777777
+	&__input
+		margin-bottom: 11px
+	&__input, &__button
+		width: 268px
+		margin-left: auto
+		margin-right: auto
+	&__icon
+		margin-bottom: 40px
+
+.header
+	color: white
+	background: url('../img/bg/header-left-top.png')no-repeat left top, url('../img/bg/header-right-top.png') no-repeat right top,#2b35bc
+	a
+		color: white
+	&__title
+		font-size: 46px
+		font-weight: 300
+		text-transform: uppercase
+		text-align: center
+		margin-bottom: 70px
+	&__button
+		max-width: 226px
+		margin-bottom: 110px
+		margin-left: auto
+		margin-right: auto
+
+	&__arrow
+		width: 24px
+		margin-left: auto
+		margin-right: auto
+
+.panel
+	position: absolute
+	width: 100%
+	top: 18px
+	left: 0
+	&__logo
+		margin-right: 70px
+	&__lang-switch
+		margin-right: 165px
+		padding-top: 7px
+		li
+			font-size: 12px
+			width: 30px
+			height: 30px
+			line-height: 30px
+			text-align: center
+			border-radius: 50%
+			text-transform: uppercase
+			font-weight: 700
+			&.select
+				background-color: #0b1a85
+	&__nav
+		padding-top: 13px
+		li
+			position: relative
+			font-size: 14px
+			margin-right: 47px
+		
+			&:last-of-type
+				margin-right: 0
+		a
+			padding-bottom: 4px
+			border-bottom: 2px solid transparent
+			&:hover
+				border-color: white
+	&__button
+		float: right
+		margin-top: 2px
+
+.contacts
+	display: none
+	padding-top: 17px
+	padding-bottom: 19px
+	z-index: 2
+	position: absolute
+	top: 74px
+	border-radius: 6px
+	background-color: #ffffff
+	width: calc(100% - 30px)
+	left: 15px
+	text-align: center
+	font-size: 22px
+	font-weight: 300
+	&:after
+		content: ''
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 0 12px 12px 12px
+		border-color: transparent transparent #ffffff transparent
+		position: absolute
+		left: calc(50% + 188px)
+		top: -12px
+	.phone, .email
+		display: inline-block
+		.icon
+			margin-right: 16px
+	.phone
+		margin-right: 70px
+		a
+			color: $color-1
+	.email
+		margin-left: 86px
+		a
+			color: #2b35bc
+			border-color: #2b35bc
+
+.company
+	text-align: center
+	&__title
+		font-size: 44px
+		font-weight: 300
+		margin-bottom: 30px
+	&__text
+		color: #777
+		line-height: 32px
+		margin-bottom: 88px
+
+	&__icons
+		color: #777777
+		.icon
+			&__wrap
+				width: 78px
+				height: 78px
+				line-height: 78px
+				text-align: center
+				margin-left: auto
+				margin-right: auto
+				box-shadow: 0 4px 16px rgba(200, 200, 200, 0.55)
+				border-radius: 50%
+				margin-bottom: 27px
+			&__text
+				font-weight: 300
+				line-height: 24px
+
+.product
+	color: white
+	&__button
+		max-width: 268px
+		padding-left: 0
+		padding-right: 0
+	&__content
+		width: 620px
+		padding-top: 125px
+	&__title
+		font-size: 36px
+		font-weight: 300
+		line-height: 52px
+		margin-bottom: 40px
+	&__links
+		margin-bottom: 45px
+		li
+			margin-right: 16px
+			&:last-of-type
+				margin-right: 0
+		a
+			&:hover
+				opacity: .7
+	&__desc
+		font-size: 20px
+		font-weight: 300
+		line-height: 32px
+		margin-bottom: 17px
+	&__img
+		float: right
+	&_full
+		text-align: center
+		.product
+			&__content, &__img
+				float: none
+				width: 100%
+			&__content
+				padding-top: 0
+			&__desc
+				margin-bottom: 30px
+			&__links
+				margin-bottom: 31px
+			&__button
+				margin-left: auto
+				margin-right: auto
+				margin-top: 35px
+	&_img-bottom
+		.container
+			position: static
+		.product
+			&__content
+				padding-bottom: 350px
+			&__img
+				position: absolute
+				bottom: -4px
+				left: 0
+	&_pink
+		background-image: linear-gradient(137deg, #c8494a 0%, #be4598 100%)
+	&_blue
+		background-image: linear-gradient(137deg, #5849c8 0%, #4581be 100%)
+	&_black
+		background-image: linear-gradient(137deg, #242424 0%, #1d1d1d 100%)
+	&_red
+		background-image: linear-gradient(137deg, #b60c0b 0%, #d50d0d 100%)
+	&_green
+		background-image: linear-gradient(137deg, #458121 0%, #458121 0%, #588e36 99%, #588e36 100%)
+	&_purple
+		background-image: linear-gradient(137deg, #be3cfb 0%, #1649cb 100%)
+
+
+.do
+	padding-top: 120px
+	padding-bottom: 125px
+	background: url('../img/bg/do-left.png') no-repeat left 1070px, url('../img/bg/do-right.png') no-repeat right -280px
+	.container
+		
+	&__title
+		font-size: 44px
+		font-weight: 300
+		text-align: center
+		margin-bottom: 100px
+	&__list
+	&__item
+		margin-bottom: 110px
+		padding-left: (83px - 15px)
+		&:last-of-type
+			margin-bottom: 0
+		&:nth-of-type(even)
+			.do
+				&__content
+					float: right
+	&__content
+		width: 680px
+	&__ul
+			line-height: 24px
+			margin-top: 30px
+			margin-bottom: 37px
+			li
+				display: block
+				color: #777777
+				font-size: 16px
+				padding-left: 35px
+				position: relative
+				margin-bottom: 15px
+				font-weight: 300
+				&:before
+					position: absolute
+					display: block
+					content: ''
+					left: 0
+					top: 1px
+					@include sprite($li)
+	&__button
+		color: white
+		max-width: 268px
+	&__img
+		padding-top: 11px
+		width: 295px
+		img
+			display: block
+			margin-left: auto
+			margin-right: auto
+
+	&__link
+		display: block
+		margin-top: 150px
+		text-align: center
+		font-size: 22px
+		a
+			color: #2b35bc
+			border-bottom: 1px solid #2b35bc
+			&:hover
+				border-color: transparent
+
+.order
+	color: white
+	background: url('../img/bg/order-left.png') no-repeat left top, url('../img/bg/order-right.png') no-repeat right top, #2b35bc
+	padding-top: 70px
+	padding-bottom: 70px
+	&__content
+		width: 500px
+		padding-top: 45px
+	&__title
+		font-size: 44px
+		font-weight: 300
+		margin-bottom: 43px
+	&__text
+		font-size: 22px
+		font-weight: 300
+		line-height: 32px
+		p
+			margin-bottom: 25px
+			&:last-of-type
+				margin-bottom: 0
+	&__form
+		width: 440px
+		float: right
+		background: white
+		border-radius: 6px
+		padding: 50px 50px 60px
+		color: $color-1
+	&__subtitle
+		text-align: center
+		font-size: 22px
+		line-height: 32px
+		margin-bottom: 35px
+	&__input
+		margin-bottom: 11px
+	&__input, &__button
+		width: 268px
+		margin-left: auto
+		margin-right: auto
+
+
+.map
+	height: 600px
+	position: relative
+	&__data
+		background: white 
+		z-index: 2
+		top: 70px
+		left: 15px
+		position: absolute
+		width: 400px
+		padding: 50px 74px 69px 57px
+		p
+			margin-bottom: 15px
+			a
+				cursor: default
+	&__title
+		font-size: 44px
+		font-weight: 300
+		line-height: 32px
+		margin-bottom: 39px
+	&__subtitle
+		font-weight: 700
+		margin-bottom: 15px
+	&__button
+		margin-top: 38px
+	&__wrap
+		position: absolute
+		top: 0
+		width: 100% !important
+	
+.footer
+	padding-top: 50px
+	padding-bottom: 46px
+	background: white
+	&__copy
+		float: right
+
+
+#fp-nav
+	opacity: 1
+	transition: .3s
+	&.right
+		right: 5%
+	&.hidden
+		opacity: 0
+		z-index: -999
+	ul
+		li
+			width: 12px
+			height: 12px
+			&:nth-of-type(1), &:nth-of-type(2), &:last-of-type
+				display: none
+		a
+			border: 2px solid white
+			border-radius: 50%
+			background: white
+			border: 2px solid transparent
+			&.active
+				background: transparent
+				border: 2px solid white
+		span
+			display: none
+
+
+#up
+	right: 5%
+	bottom: 5%
+	position: fixed
+	display: block
+	width: 63px
+	height: 63px
+	box-shadow: 0 13px 21px rgba(0, 0, 0, 0.34)
+	background-color: #ffffff
+	text-align: center
+	line-height: 58px
+	border-radius: 50%
+	transition: .3s
+	cursor: pointer
+	// &:hover
+	// 	box-shadow: 0 13px 10px rgba(0, 0, 0, 0.34)

@@ -1,0 +1,83 @@
+.icon-app-store {
+  background-image: url(../img/sprite.png);
+  background-position: -117px 0px;
+  width: 160px;
+  height: 46px; }
+
+.icon-arrow-down {
+  background-image: url(../img/sprite.png);
+  background-position: -159px -92px;
+  width: 24px;
+  height: 16px; }
+
+.icon-arrow-top {
+  background-image: url(../img/sprite.png);
+  background-position: -183px -92px;
+  width: 24px;
+  height: 16px; }
+
+.icon-close {
+  background-image: url(../img/sprite.png);
+  background-position: -207px -92px;
+  width: 16px;
+  height: 16px; }
+
+.icon-computer {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -117px;
+  width: 42px;
+  height: 42px; }
+
+.icon-config {
+  background-image: url(../img/sprite.png);
+  background-position: -40px -159px;
+  width: 38px;
+  height: 38px; }
+
+.icon-devices {
+  background-image: url(../img/sprite.png);
+  background-position: -42px -117px;
+  width: 46px;
+  height: 35px; }
+
+.icon-email {
+  background-image: url(../img/sprite.png);
+  background-position: -137px -92px;
+  width: 22px;
+  height: 18px; }
+
+.icon-google-play {
+  background-image: url(../img/sprite.png);
+  background-position: -117px -46px;
+  width: 160px;
+  height: 46px; }
+
+.icon-iphone {
+  background-image: url(../img/sprite.png);
+  background-position: -78px -159px;
+  width: 22px;
+  height: 36px; }
+
+.icon-li {
+  background-image: url(../img/sprite.png);
+  background-position: -117px -92px;
+  width: 20px;
+  height: 20px; }
+
+.icon-phone {
+  background-image: url(../img/sprite.png);
+  background-position: -88px -117px;
+  width: 18px;
+  height: 18px; }
+
+.icon-thank-you {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 117px;
+  height: 117px; }
+
+.icon-thumbs-up {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -159px;
+  width: 40px;
+  height: 39px; }
