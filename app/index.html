@@ -17,7 +17,7 @@
 		<div class="header header_main section fp-hidden-nav active" data-anchor="header" id="header">
 			<div class="panel">
 				<div class="container row">
-					<div class="panel__logo col"><a href=""><img src="upload/logo.png" alt=""></a></div>
+					<div class="panel__logo col"><img src="upload/logo.png" alt=""></div>
 					<div class="panel__lang-switch lang-switch col">
 						<ul>
 							<li class="select"><a href="">RU</a></li>
@@ -251,11 +251,13 @@
 						</div>
 					</div>
 					<div class="order__form col">
-						<div class="order__subtitle">Оставьте заявку на <strong>бесплатную</strong> консультацию</div>
-						<input type="text" class="order__input input" placeholder="Введите имя" name="name">
-						<input type="text" class="order__input input input-phone input-requred" placeholder="Введите телефон*" name="phone">
-						<input type="text" class="order__input input" placeholder="Введите e-mail" name="email">
-						<button class="order__button button button_yellow button_shadow-yellow">Оставить заявку</button>
+						<form>
+							<div class="order__subtitle">Оставьте заявку на <strong>бесплатную</strong> консультацию</div>
+							<input type="text" class="order__input input" placeholder="Введите имя" name="name">
+							<input type="text" class="order__input input input-phone input-requred" placeholder="Введите телефон*" name="phone">
+							<input type="text" class="order__input input" placeholder="Введите e-mail" name="email">
+							<button class="order__button button button_yellow button_shadow-yellow">Оставить заявку</button>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -298,40 +300,50 @@
 	</div>
 	<div class="popups">
 		<div class="popup" id="popup-callback">
-			<div class="popup__title">Заказать звонок</div>
-			<div class="popup__desc">Оставьте заявку и мы с вами свяжемся <br />в ближайшее время!</div>
-			<input type="text" class="popup__input input" placeholder="Введите имя" name="name">
-			<input type="text" class="popup__input input input-phone input-requred" placeholder="Введите телефон*" name="phone">
-			<input type="text" class="popup__input input" placeholder="Email" name="email">
-			<button class="popup__button button button_yellow">Узнать нюансы</button>
+			<form>
+				<div class="popup__title">Заказать звонок</div>
+				<div class="popup__desc">Оставьте заявку и мы с вами свяжемся <br />в ближайшее время!</div>
+				<input type="text" class="popup__input input" placeholder="Введите имя" name="name">
+				<input type="text" class="popup__input input input-phone input-requred" placeholder="Введите телефон*" name="phone">
+				<input type="text" class="popup__input input" placeholder="Email" name="email">
+				<button class="popup__button button button_yellow">Узнать нюансы</button>
+			</form>
 		</div>
 		<div class="popup" id="popup-nuances">
-			<div class="popup__title">Узнать нюансы</div>
-			<div class="popup__desc">Оставьте заявку, чтобы узнать нюансы по разработке вашего мобильного приложения</div>
-			<input type="text" class="popup__input input" placeholder="Введите имя" name="name">
-			<input type="text" class="popup__input input input-phone input-requred" placeholder="Введите телефон*" name="phone">
-			<button class="popup__button button button_yellow">Узнать нюансы</button>
+			<form>
+				<div class="popup__title">Узнать нюансы</div>
+				<div class="popup__desc">Оставьте заявку, чтобы узнать нюансы по разработке вашего мобильного приложения</div>
+				<input type="text" class="popup__input input" placeholder="Введите имя" name="name">
+				<input type="text" class="popup__input input input-phone input-requred" placeholder="Введите телефон*" name="phone">
+				<button class="popup__button button button_yellow">Узнать нюансы</button>
+			</form>
 		</div>
 		<div class="popup" id="popup-application">
-			<div class="popup__title">Мне нужно приложение</div>
-			<div class="popup__desc">Оставьте заявку, чтобы узнать срок и стоимость разработки приложения</div>
-			<input type="text" class="popup__input input" placeholder="Введите имя" name="name">
-			<input type="text" class="popup__input input input-phone input-requred" placeholder="Введите телефон*" name="phone">
-			<button class="popup__button button button_yellow">Отправить</button>
+			<form>
+				<div class="popup__title">Мне нужно приложение</div>
+				<div class="popup__desc">Оставьте заявку, чтобы узнать срок и стоимость разработки приложения</div>
+				<input type="text" class="popup__input input" placeholder="Введите имя" name="name">
+				<input type="text" class="popup__input input input-phone input-requred" placeholder="Введите телефон*" name="phone">
+				<button class="popup__button button button_yellow">Отправить</button>
+			</form>
 		</div>
 		<div class="popup" id="popup-order">
-			<div class="popup__title">Заказать разработку игры</div>
-			<div class="popup__desc">Оставьте заявку, чтобы узнать срок и стоимость разработки игры</div>
-			<input type="text" class="popup__input input" placeholder="Введите имя" name="name">
-			<input type="text" class="popup__input input input-phone input-requred" placeholder="Введите телефон*" name="phone">
-			<button class="popup__button button button_yellow">Заказать</button>
+			<form>
+				<div class="popup__title">Заказать разработку игры</div>
+				<div class="popup__desc">Оставьте заявку, чтобы узнать срок и стоимость разработки игры</div>
+				<input type="text" class="popup__input input" placeholder="Введите имя" name="name">
+				<input type="text" class="popup__input input input-phone input-requred" placeholder="Введите телефон*" name="phone">
+				<button class="popup__button button button_yellow">Заказать</button>
+			</form>
 		</div>
 		<div class="popup" id="popup-issues">
-			<div class="popup__title">Остались вопросы</div>
-			<div class="popup__desc">Остались вопросы? Оставьте заявку и мы с удовольствием на них ответим в ближайшее время!</div>
-			<input type="text" class="popup__input input" placeholder="Введите имя" name="name">
-			<input type="text" class="popup__input input input-phone input-requred" placeholder="Введите телефон*" name="phone">
-			<button class="popup__button button button_yellow">Отправить</button>
+			<form>
+				<div class="popup__title">Остались вопросы</div>
+				<div class="popup__desc">Остались вопросы? Оставьте заявку и мы с удовольствием на них ответим в ближайшее время!</div>
+				<input type="text" class="popup__input input" placeholder="Введите имя" name="name">
+				<input type="text" class="popup__input input input-phone input-requred" placeholder="Введите телефон*" name="phone">
+				<button class="popup__button button button_yellow">Отправить</button>
+			</form>
 		</div>
 		<div class="popup" id="popup-thanks">
 			<div class="popup__icon"><i class="icon icon-thank-you"></i></div>

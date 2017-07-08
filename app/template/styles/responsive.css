@@ -18,6 +18,8 @@
     padding-bottom: 25px; }
     .header .panel .container {
       padding-top: 0; }
+  .header_main .header__title {
+    margin-top: 200px; }
   .header__portfolio__title {
     margin-top: 250px; }
   .header_technologies .header__title {

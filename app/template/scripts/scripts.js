@@ -42,17 +42,70 @@ $(document).ready(function($) {
 		navigationPosition: 'right',
 		fixedElements: '#up',
 	});
-	$('form').submit(function() {
+
+
+
+	// $('.popup__button').click(function() {
+	// 	parent.jQuery.fancybox.getInstance().close();
+	// 	$.fancybox.open({
+	// 		src  : '#popup-thanks',
+	// 		type : 'inline'
+	// 	});
+	// });
+
+
+	// $('.order__button').click(function() {
+	// 	$.fancybox.open({
+	// 		src  : '#popup-thanks',
+	// 		type : 'inline'
+	// 	});
+	// });
+
+
+
+	$('.popup form').submit(function() {
+		var inputRequred = $(this).find('.input-requred');
+			inputRequredValue = inputRequred.val();
 		$.ajax({
 			type: "POST",
-			url: "/order.php",
+			url: "order.php",
 			data: $(this).serialize()
 		}).done(function() {
-			popupForm.css('display','none');
-			popupMessage.css('display','block');
+			if (inputRequredValue == "" || inputRequredValue == null) {
+				inputRequred.addClass('input-error');
+			} else {
+				inputRequred.removeClass('input-error');
+				parent.jQuery.fancybox.getInstance().close();
+				$.fancybox.open({
+					src  : '#popup-thanks',
+					type : 'inline'
+				});
+			}
 		});
 		return false;
 	});
+
+	$('.order form').submit(function() {
+		var inputRequred = $(this).find('.input-requred');
+			inputRequredValue = inputRequred.val();
+		$.ajax({
+			type: "POST",
+			url: "order.php",
+			data: $(this).serialize()
+		}).done(function() {
+			if (inputRequredValue == "" || inputRequredValue == null) {
+				inputRequred.addClass('input-error');
+			} else {
+				inputRequred.removeClass('input-error');
+				$.fancybox.open({
+					src  : '#popup-thanks',
+					type : 'inline'
+				});
+			}
+		});
+		return false;
+	});
+
 
 
 	var nav = $('#fp-nav'),
@@ -84,21 +137,7 @@ $(document).ready(function($) {
 	$('.input-phone').mask("+7 (999) 999-99-99");
 
 
-	$('.popup__button').click(function() {
-		parent.jQuery.fancybox.getInstance().close();
-		$.fancybox.open({
-			src  : '#popup-thanks',
-			type : 'inline'
-		});
-	});
-
-
-	$('.order__button').click(function() {
-		$.fancybox.open({
-			src  : '#popup-thanks',
-			type : 'inline'
-		});
-	});
+	
 
 
 	var navLinkContacts = $('.panel__nav li:last-of-type a'),
