@@ -45,7 +45,8 @@ gulp.task('scripts', function() {
 		'app/template/libs/fullpage.js/jquery.fullPage.js',
 		'app/template/libs/jquery.maskedinput/dist/jquery.maskedinput.min.js',
 		'app/template/libs/fancybox/dist/jquery.fancybox.min.js',
-		'app/template/libs/slick-carousel/slick/slick.min.js'
+		'app/template/libs/slick-carousel/slick/slick.min.js',
+		'app/template/libs/nextparticle/nextparticle.min.js'
 		])
 		.pipe(concat('libs.min.js')) 
 		.pipe(uglify()) 

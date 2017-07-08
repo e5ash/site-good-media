@@ -2,6 +2,7 @@
 @import url('../libs/fancybox/dist/jquery.fancybox.min.css')
 @import url('../libs/slick-carousel/slick/slick.css')
 @import url('../libs/slick-carousel/slick/slick-theme.css')
+@import url(animation.css)
 @import "sprite.sass"
 @import "grid.sass"
 @import "fonts.sass"
@@ -23,6 +24,16 @@ body
 	color: $color-1
 	background: white
 	box-sizing: border-box
+	&.loaded
+		.prelouder
+			// opacity: 0
+			.prelouder__wrap
+				opacity: 0
+			img
+				opacity: 0 !important
+				// display: none
+			&:before, &:after
+				width: 0
 
 body, html
 	overflow: hidden !important
@@ -95,6 +106,20 @@ a
 		text-transform: uppercase
 		&:hover
 			background: #ef8f31
+	&_blue
+		width: 208px
+		line-height: 46px
+		height: 46px
+		border-radius: 30px
+		background-color: #a40226
+		text-transform: uppercase
+		color: white
+		background: #2b35bc
+		margin-left: auto
+		margin-right: auto
+		font-weight: 500
+		&:hover
+			background: #314CCE
 	&_shadow-blue
 		box-shadow: 0 16px 43px rgba(25, 40, 134, 0.48)
 	&_shadow-red
@@ -160,9 +185,26 @@ a
 .header
 	color: white
 	background: url('../img/bg/header-left-top.png')no-repeat left top, url('../img/bg/header-right-top.png') no-repeat right top,#2b35bc
+	&_portfolio
+		.header
+			&__content
+				padding-top: 245px
+			&__title
+				text-align: left
+				margin-bottom: 50px
+			&__button
+				margin-left: 0
+			&__img
+				float: right
+				img
+					display: block
+					position: relative
+					right: -115px
 	a
 		color: white
 	&__title
+		position: relative
+		z-index: 1
 		font-size: 46px
 		font-weight: 300
 		text-transform: uppercase
@@ -178,8 +220,110 @@ a
 		width: 24px
 		margin-left: auto
 		margin-right: auto
+		& + canvas
 
+			position: absolute
+			top: -97px
+			left: calc(50% - 373px)
+
+.logo
+	display: inline-block
+	width: 44px
+	height: 44px
+	position: relative
+	margin-right: 13px
+	left: 40px
+	transition: .3s 1s
+	// transition-delay: 1.2s
+	&.start
+		transform: translateX(-40px)
+		.logo
+
+			&__box
+				&:nth-of-type(2), &:nth-of-type(4), &:nth-of-type(5), &:nth-of-type(5), &:nth-of-type(6)
+					transform: translateX(0)
+				&:nth-of-type(7), &:nth-of-type(8), &:nth-of-type(9), &:nth-of-type(10)
+					transform: translateX(0)
+				&:nth-of-type(16), &:nth-of-type(17), &:nth-of-type(18), &:nth-of-type(19), &:nth-of-type(20)
+					transform: translateX(0)
+		+ .prelouder__text
+			opacity: 1
+			transition-delay: 1.2s
+	&__box
+		position: absolute
+		display: block
+		width: 8px
+		height: 8px
+		background: white
+		transition: .3s .2s
+		&:nth-of-type(2), &:nth-of-type(4), &:nth-of-type(5), &:nth-of-type(5), &:nth-of-type(6)
+			transform: translateX(18px)
+		&:nth-of-type(7), &:nth-of-type(8), &:nth-of-type(9), &:nth-of-type(10)
+			transform: translateX(9px)
+		&:nth-of-type(16), &:nth-of-type(17), &:nth-of-type(18), &:nth-of-type(19), &:nth-of-type(20)
+			transform: translateX(-9px)
+		&:nth-of-type(1)
+			top: 0
+			left: 0
+		&:nth-of-type(2)
+			top: 0
+			left: 9px
+		&:nth-of-type(3)
+			top: 0
+			right: 0
+		&:nth-of-type(4)
+			top: 9px
+			left: 0
+		&:nth-of-type(5)
+			top: 9px
+			left: 9px
+		&:nth-of-type(6)
+			top: 9px
+			left: (9px * 2)
+		&:nth-of-type(7)
+			top: (9px * 2)
+			left: 0
+		&:nth-of-type(8)
+			top: (9px * 2)
+			left: 9px
+		&:nth-of-type(9)
+			top: (9px * 2)
+			left: (9px * 2)
+		&:nth-of-type(10)
+			top: (9px * 2)
+			left: (9px * 3)
+		&:nth-of-type(11)
+			top: (9px * 3)
+			left: 0
+		&:nth-of-type(12)
+			top: (9px * 3)
+			left: 9px
+		&:nth-of-type(13)
+			top: (9px * 3)
+			left: (9px * 2)
+		&:nth-of-type(14)
+			top: (9px * 3)
+			left: (9px * 3)
+		&:nth-of-type(15)
+			top: (9px * 3)
+			right: 0
+		&:nth-of-type(16)
+			bottom: 0
+			left: 9px
+		&:nth-of-type(17)
+			bottom: 0
+			left: (9px * 2)
+		&:nth-of-type(18)
+			bottom: 0
+			left: (9px * 3)
+		&:nth-of-type(19)
+			bottom: 0
+			left: (9px * 4)
+		&:nth-of-type(20)
+			bottom: 0
+			right: 0
 .panel
+	z-index: 99
 	position: absolute
 	width: 100%
 	top: 18px
@@ -281,25 +425,84 @@ a
 		line-height: 32px
 		margin-bottom: 88px
 
-	&__icons
-		color: #777777
-		.icon
-			&__wrap
-				width: 78px
-				height: 78px
-				line-height: 78px
-				text-align: center
-				margin-left: auto
-				margin-right: auto
-				box-shadow: 0 4px 16px rgba(200, 200, 200, 0.55)
+.icons
+	color: #777777
+	text-align: center
+	.icon
+		&__wrap
+			width: 78px
+			height: 78px
+			line-height: 78px
+			text-align: center
+			margin-left: auto
+			margin-right: auto
+			box-shadow: 0 4px 16px rgba(200, 200, 200, 0.55)
+			border-radius: 50%
+			margin-bottom: 27px
+		&__text
+			font-weight: 300
+			line-height: 24px
+
+.info
+	
+
+
+
+.apps
+	&__title
+		margin-top: 80px
+		text-align: center
+		margin-bottom: 100px
+		font-size: 44px
+		font-weight: 300
+	&__list
+		position: relative
+		margin-bottom: 0
+		padding-bottom: 80px
+		padding-left: 100px
+		padding-right: 100px
+		.slick-arrow
+			top: 35px
+			&:before
+				display: none
+		.slick-prev
+			left: 0
+		.slick-next
+			right: 0
+		.slick-dots
+			bottom: -6px
+			width: calc(100% - 200px)
+			li
+				width: 6px
+				height: 6px
 				border-radius: 50%
-				margin-bottom: 27px
-			&__text
-				font-weight: 300
-				line-height: 24px
+				background-color: #d3d3d3
+				margin: 0 6px
+				&.slick-active
+					background-color: #2b35bc
+			button
+				width: 100%
+				height: 100%
+				&:before
+					display: none
+.app
+	
+	a
+		&:hover
+			img
+				opacity: .6
+	img
+		margin-left: auto
+		margin-right: auto
+		transition: .3s
+
+
 
 .product
 	color: white
+	.container
+		padding-top: 20px
+		padding-bottom: 20px
 	&__button
 		max-width: 268px
 		padding-left: 0
@@ -379,6 +582,10 @@ a
 		font-weight: 300
 		text-align: center
 		margin-bottom: 100px
+	&__subtitle
+		font-size: 22px
+		font-weight: 300
+		line-height: 32px
 	&__list
 	&__item
 		margin-bottom: 110px
@@ -501,13 +708,180 @@ a
 		position: absolute
 		top: 0
 		width: 100% !important
+		height: 100% !important
 	
+.want
+	color: white
+	background: url('../img/bg/order-left.png') no-repeat left top, url('../img/bg/order-right.png') no-repeat right top, #2b35bc
+	.container
+		padding-top: 115px
+		padding-bottom: 90px
+	a
+		color: white
+	&__title
+		font-size: 44px
+		margin-bottom: 40px
+	&__phones
+		font-size: 22px
+		line-height: 38px
+		margin-bottom: 54px
+	&__email
+		font-size: 22px
+		margin-bottom: 50px
+		a
+			color: #fbc11a
+			border-bottom: 1px solid #fbc11a
+			&:hover
+				border-color: transparent
+	&__button
+		width: 268px
+	
+	&__img
+		right: 0
+		position: absolute
+		bottom: 0
+		img
+			display: block
+
+
+.services
+	text-align: center
+	&__title
+		margin-bottom: 45px
+		font-size: 46px
+		text-transform: uppercase
+	&__list
+		margin-bottom: 90px
+	&__item
+		height: 200px
+		border: 1px solid transparent
+		transition: .3s
+		&:hover
+			box-shadow: 0 18px 84px #151e99
+			border-color: #161f9a
+			background-color: #2b35bc
+	&__icon
+		line-height: 130px
+	&__text
+		line-height: 24px
+
+
+	&-info
+		.icons
+			padding-top: 85px
+		.do
+			padding-bottom: 170px
+			background: url('../img/bg/do-left.png') no-repeat left 1070px, url('../img/bg/do-right-full.png') no-repeat right 0
+
+	
+
+
+.technologies
+	position: relative
+	margin-bottom: 65px
+	left: -4px
+	&_start
+		.technologies
+			&__item
+				transform: translate(0px, 0px) !important
+	&__title
+		font-size: 46px
+		margin-bottom: 45px
+		text-align: center
+	&__list
+		width: 680px
+		height: 430px
+		position: relative
+		margin-left: auto
+		margin-right: auto
+	&__item
+		display: block
+		position: absolute
+		background: white
+		border-radius: 50%
+		width: 121px
+		height: 121px
+		line-height: 121px
+		text-align: center
+		cursor: pointer
+		transition: .5s
+		img
+			transition: .5s
+			vertical-align: middle
+		&:nth-of-type(1)
+			top: 162px
+			left: 0
+			transform: translateX(-100px)
+			&:hover
+				animation: technologies-1 infinite 3s
+		&:nth-of-type(2)
+			top: 76px
+			left: 122px
+			transform: translate(-100px,-100px)
+			&:hover
+				animation: technologies-2 infinite 3s
+		&:nth-of-type(3)
+			top: 0
+			left: 284px
+			transform: translateY(-100px)
+			&:hover
+				animation: technologies-3 infinite 3s
+		&:nth-of-type(4)
+			top: 76px
+			right: 122px
+			transform: translate(100px,-100px)
+			&:hover
+				animation: technologies-4 infinite 3s
+		&:nth-of-type(5)
+			top: 162px
+			right: 0
+			transform: translateX(100px)
+			&:hover
+				animation: technologies-5 infinite 3s
+		&:nth-of-type(6)
+			bottom: 76px
+			left: 122px
+			transform: translate(-100px,100px)
+			&:hover
+				animation: technologies-6 infinite 3s
+		&:nth-of-type(7)
+			bottom: 0
+			left: 284px
+			transform: translateY(100px)
+			&:hover
+				animation: technologies-7 infinite 3s
+		&:nth-of-type(8)
+			bottom: 76px
+			right: 122px
+			transform: translate(100px,100px)
+			&:hover
+				animation: technologies-8 infinite 3s
+		&:nth-of-type(9)
+			width: 158px
+			height: 158px
+			line-height: 158px
+			top: 136px
+			left: 267px 
+			&:hover
+				// img
+				transform: scale(1.05) !important
+
+
+
+
+
+
+
+
+
 .footer
-	padding-top: 50px
-	padding-bottom: 46px
+	padding-top: 40px
+	padding-bottom: 36px
 	background: white
+	line-height: 46px
 	&__copy
 		float: right
+		text-align: right
 
 
 #fp-nav
@@ -534,6 +908,48 @@ a
 				border: 2px solid white
 		span
 			display: none
+	sdfsdf
+		display: none
+
+.prelouder
+	z-index: 99999999
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	img
+		transition: .1s
+	&:before, &:after
+		z-index: -2
+		content: ''
+		position: absolute
+		width: 50%
+		height: 100%
+		top: 0
+		transition: 1s
+		// background: #2b35bc
+		// background: #384FCE
+		background: #ef8f31
+	&:before
+		left: 0
+	&:after
+		right: 0
+	&__wrap
+		position: absolute
+		top: calc(50% - 24px)
+		left: calc(50% - 56px)
+		transition: .3s
+	&__icon
+		margin-right: 13px
+	&__text
+		opacity: 0
+		transition: .8s
+	
+
+.pb-reset
+	.container
+		padding-bottom: 0
 
 
 #up
@@ -550,5 +966,3 @@ a
 	border-radius: 50%
 	transition: .3s
 	cursor: pointer
-	// &:hover
-	// 	box-shadow: 0 13px 10px rgba(0, 0, 0, 0.34)

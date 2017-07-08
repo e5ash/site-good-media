@@ -1,4 +1,39 @@
 $(document).ready(function($) {
+	
+	setTimeout(function(){
+		$('body').addClass('loaded');
+	}, 2000);
+
+	setTimeout(function(){
+		$('.prelouder').hide();
+	}, 2700);
+
+	$('.logo').addClass('start');
+
+
+
+	$('.apps__list').slick({
+		slidesToShow: 6,
+		slidesToScroll: 3,
+		dots: true,
+		prevArrow: '<button type="button" class="slick-prev slick-arrow"><i class="icon icon-arrow-left"></i></button>',
+		nextArrow: '<button type="button" class="slick-next slick-arrow"><i class="icon icon-arrow-right"></i></button>',
+		responsive: [{
+			breakpoint: 730,
+			settings: {
+				slidesToShow: 3
+			}}, { 
+			breakpoint: 390,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2
+			}
+		}]
+	});
+
+
+
+
 	$('#fullpage').fullpage({
 		scrollBar: true,
 		scrollOverflow: true,
@@ -72,6 +107,8 @@ $(document).ready(function($) {
 		e.preventDefault();
 		contacts.fadeToggle(300);
 	});
+
+	
 });
 
 

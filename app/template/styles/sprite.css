@@ -1,3 +1,15 @@
+.icon-analytics-yellow {
+  background-image: url(../img/sprite.png);
+  background-position: -277px 0px;
+  width: 69px;
+  height: 65px; }
+
+.icon-anchor {
+  background-image: url(../img/sprite.png);
+  background-position: -117px -92px;
+  width: 40px;
+  height: 22px; }
+
 .icon-app-store {
   background-image: url(../img/sprite.png);
   background-position: -117px 0px;
@@ -6,45 +18,87 @@
 
 .icon-arrow-down {
   background-image: url(../img/sprite.png);
-  background-position: -159px -92px;
+  background-position: -317px -225px;
   width: 24px;
   height: 16px; }
+
+.icon-arrow-left {
+  background-image: url(../img/sprite.png);
+  background-position: -173px -155px;
+  width: 16px;
+  height: 24px; }
+
+.icon-arrow-right {
+  background-image: url(../img/sprite.png);
+  background-position: -247px -117px;
+  width: 16px;
+  height: 24px; }
 
 .icon-arrow-top {
   background-image: url(../img/sprite.png);
-  background-position: -183px -92px;
+  background-position: -317px -209px;
   width: 24px;
   height: 16px; }
 
+.icon-chat {
+  background-image: url(../img/sprite.png);
+  background-position: -211px -117px;
+  width: 36px;
+  height: 36px; }
+
 .icon-close {
   background-image: url(../img/sprite.png);
-  background-position: -207px -92px;
+  background-position: -323px -192px;
   width: 16px;
   height: 16px; }
 
 .icon-computer {
   background-image: url(../img/sprite.png);
-  background-position: 0px -117px;
+  background-position: -277px -132px;
   width: 42px;
   height: 42px; }
 
 .icon-config {
   background-image: url(../img/sprite.png);
-  background-position: -40px -159px;
+  background-position: -173px -117px;
   width: 38px;
   height: 38px; }
 
+.icon-design-yellow {
+  background-image: url(../img/sprite.png);
+  background-position: -202px -182px;
+  width: 67px;
+  height: 67px; }
+
 .icon-devices {
   background-image: url(../img/sprite.png);
-  background-position: -42px -117px;
+  background-position: -277px -174px;
   width: 46px;
   height: 35px; }
 
 .icon-email {
   background-image: url(../img/sprite.png);
-  background-position: -137px -92px;
+  background-position: -323px -174px;
   width: 22px;
   height: 18px; }
+
+.icon-energy {
+  background-image: url(../img/sprite.png);
+  background-position: -317px -65px;
+  width: 29px;
+  height: 40px; }
+
+.icon-file {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -289px;
+  width: 31px;
+  height: 41px; }
+
+.icon-gamepad-yellow {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -117px;
+  width: 96px;
+  height: 65px; }
 
 .icon-google-play {
   background-image: url(../img/sprite.png);
@@ -52,23 +106,59 @@
   width: 160px;
   height: 46px; }
 
+.icon-hardware-yellow {
+  background-image: url(../img/sprite.png);
+  background-position: -96px -117px;
+  width: 77px;
+  height: 64px; }
+
+.icon-i30 {
+  background-image: url(../img/sprite.png);
+  background-position: -157px -92px;
+  width: 41px;
+  height: 19px; }
+
+.icon-i6 {
+  background-image: url(../img/sprite.png);
+  background-position: -263px -117px;
+  width: 13px;
+  height: 19px; }
+
+.icon-iphone-yellow {
+  background-image: url(../img/sprite.png);
+  background-position: -277px -65px;
+  width: 40px;
+  height: 67px; }
+
 .icon-iphone {
   background-image: url(../img/sprite.png);
-  background-position: -78px -159px;
+  background-position: -319px -132px;
   width: 22px;
   height: 36px; }
 
 .icon-li {
   background-image: url(../img/sprite.png);
-  background-position: -117px -92px;
+  background-position: -317px -105px;
   width: 20px;
   height: 20px; }
 
 .icon-phone {
   background-image: url(../img/sprite.png);
-  background-position: -88px -117px;
+  background-position: -198px -92px;
   width: 18px;
   height: 18px; }
+
+.icon-settings-done-yellow {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -182px;
+  width: 68px;
+  height: 68px; }
+
+.icon-settings-yellow {
+  background-image: url(../img/sprite.png);
+  background-position: -135px -182px;
+  width: 67px;
+  height: 67px; }
 
 .icon-thank-you {
   background-image: url(../img/sprite.png);
@@ -78,6 +168,18 @@
 
 .icon-thumbs-up {
   background-image: url(../img/sprite.png);
-  background-position: 0px -159px;
+  background-position: -277px -209px;
   width: 40px;
   height: 39px; }
+
+.icon-watch {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -250px;
+  width: 36px;
+  height: 39px; }
+
+.icon-website-yellow {
+  background-image: url(../img/sprite.png);
+  background-position: -68px -182px;
+  width: 67px;
+  height: 67px; }
