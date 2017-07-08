@@ -320,6 +320,8 @@ a {
   transition: border-color 0.3s; }
   .input:focus {
     border-color: #2D46CD; }
+  .input.input-error {
+    border-color: red; }
 
 .button {
   display: block;

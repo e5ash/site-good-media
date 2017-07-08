@@ -68,7 +68,7 @@ $(document).ready(function($) {
 			inputRequredValue = inputRequred.val();
 		$.ajax({
 			type: "POST",
-			url: "order.php",
+			url: "/order.php",
 			data: $(this).serialize()
 		}).done(function() {
 			if (inputRequredValue == "" || inputRequredValue == null) {
@@ -90,7 +90,7 @@ $(document).ready(function($) {
 			inputRequredValue = inputRequred.val();
 		$.ajax({
 			type: "POST",
-			url: "order.php",
+			url: "/order.php",
 			data: $(this).serialize()
 		}).done(function() {
 			if (inputRequredValue == "" || inputRequredValue == null) {
