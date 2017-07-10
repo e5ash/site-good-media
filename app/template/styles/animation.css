@@ -1,14 +1,14 @@
 @-webkit-keyframes technologies-1{from {-webkit-transform:translate(0px, 0px); opacity: 1;}
-50% {-webkit-transform:translate(-5px, 9px)}
+50% {-webkit-transform:translate(9px, 9px)}
 to {-webkit-transform: translate(0, 0px);opacity: 1;}}
 @-moz-keyframes technologies-1{from {-webkit-transform:translate(0px, 0px); opacity: 1;}
-50% {-moz-transform:translate(-5px, 9px)}
+50% {-moz-transform:translate(9px, 9px)}
 to {-moz-transform: translate(0, 0px);opacity: 1;}}
 @-o-keyframes technologies-1{from {-webkit-transform:translate(0px, 0px); opacity: 1;}
-50% {-o-transform:translate(-5px, 9px)}
+50% {-o-transform:translate(9px, 9px)}
 to {-o-transform: translate(0, 0px);opacity: 1;}}
 @keyframes technologies-1{from {-webkit-transform:translate(0px, 0px); opacity: 1;}
-50% {transform:translate(-5px, 9px)}
+50% {transform:translate(9px, 9px)}
 to {transform: translate(0, 0px);opacity: 1;}}
 
 
@@ -54,16 +54,16 @@ to {transform: translate(0, 0px);opacity: 1;}}
 
 
 @-webkit-keyframes technologies-5{from {-webkit-transform:translate(0px, 0px); opacity: 1;}
-50% {-webkit-transform:translate(8px, -12px)}
+50% {-webkit-transform:translate(-8px, 0px)}
 to {-webkit-transform: translate(0, 0px);opacity: 1;}}
 @-moz-keyframes technologies-5{from {-webkit-transform:translate(0px, 0px); opacity: 1;}
-50% {-moz-transform:translate(8px, -12px)}
+50% {-moz-transform:translate(-8px, 0px)}
 to {-moz-transform: translate(0, 0px);opacity: 1;}}
 @-o-keyframes technologies-5{from {-webkit-transform:translate(0px, 0px); opacity: 1;}
-50% {-o-transform:translate(8px, -12px)}
+50% {-o-transform:translate(-8px, 0px)}
 to {-o-transform: translate(0, 0px);opacity: 1;}}
 @keyframes technologies-5{from {-webkit-transform:translate(0px, 0px); opacity: 1;}
-50% {transform:translate(8px, -12px)}
+50% {transform:translate(-8px, 0px)}
 to {transform: translate(0, 0px);opacity: 1;}}
 
 @-webkit-keyframes technologies-6{from {-webkit-transform:translate(0px, 0px); opacity: 1;}

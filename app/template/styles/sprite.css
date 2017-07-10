@@ -16,9 +16,21 @@
   width: 160px;
   height: 46px; }
 
+.icon-arrow-big-left {
+  background-image: url(../img/sprite.png);
+  background-position: -317px -209px;
+  width: 18px;
+  height: 34px; }
+
+.icon-arrow-big-right {
+  background-image: url(../img/sprite.png);
+  background-position: -323px -174px;
+  width: 18px;
+  height: 34px; }
+
 .icon-arrow-down {
   background-image: url(../img/sprite.png);
-  background-position: -317px -225px;
+  background-position: -220px -92px;
   width: 24px;
   height: 16px; }
 
@@ -36,7 +48,7 @@
 
 .icon-arrow-top {
   background-image: url(../img/sprite.png);
-  background-position: -317px -209px;
+  background-position: -244px -92px;
   width: 24px;
   height: 16px; }
 
@@ -48,7 +60,7 @@
 
 .icon-close {
   background-image: url(../img/sprite.png);
-  background-position: -323px -192px;
+  background-position: -207px -155px;
   width: 16px;
   height: 16px; }
 
@@ -78,7 +90,7 @@
 
 .icon-email {
   background-image: url(../img/sprite.png);
-  background-position: -323px -174px;
+  background-position: -198px -92px;
   width: 22px;
   height: 18px; }
 
@@ -144,7 +156,7 @@
 
 .icon-phone {
   background-image: url(../img/sprite.png);
-  background-position: -198px -92px;
+  background-position: -189px -155px;
   width: 18px;
   height: 18px; }
 

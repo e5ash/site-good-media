@@ -24,6 +24,8 @@ body
 	color: $color-1
 	background: white
 	box-sizing: border-box
+	&.full
+		overflow-y: visible !important
 	&.loaded
 		.prelouder
 			// opacity: 0
@@ -35,7 +37,7 @@ body
 			&:before, &:after
 				width: 0
 
-body, html
+body
 	overflow: hidden !important
 
 h1, h2, h3, h4, h5, h6
@@ -106,8 +108,24 @@ a
 		font-weight: 600
 		color: white
 		text-transform: uppercase
-		&:hover
+		position: relative
+		span
+			z-index: 2
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
 			background: #ef8f31
+			opacity: 0
+			transition: .3s
+			border-radius: 40px
+		&:hover
+			&:after
+				z-index: 1
+				opacity: 1
 	&_blue
 		width: 208px
 		line-height: 46px
@@ -188,6 +206,8 @@ a
 	color: white
 	background: url('../img/bg/header-left-top.png')no-repeat left top, url('../img/bg/header-right-top.png') no-repeat right top,#2b35bc
 	&_portfolio
+		.container
+			position: static
 		.header
 			&__content
 				padding-top: 245px
@@ -197,11 +217,20 @@ a
 			&__button
 				margin-left: 0
 			&__img
-				float: right
-				img
-					display: block
-					position: relative
-					right: -115px
+				position: absolute
+				right: calc(50% - 750px)
+				bottom: -100px
+	&_main
+		.header
+			&__title
+				margin-top: 150px
+				margin-bottom: 10%
+			&__button
+				margin-bottom: 12%
+	&_technologies, &_services
+		padding-bottom: 30px
+	&_services
+
 	a
 		color: white
 	&__title
@@ -217,16 +246,32 @@ a
 		margin-bottom: 110px
 		margin-left: auto
 		margin-right: auto
-
+	&__logo
+		text-align: center
+		overflow: visible
+		margin-bottom: -70px
+		+ .header__title
+			margin-top: 0 !important
+			width: 275px
+			margin-left: auto !important
+			margin-right: auto !important
+			span
+				display: block
+				width: 275px
+				margin-left: auto
+				margin-right: auto
+				+ span
+					position: relative
+					width: 745px
+					left: -240px
 	&__arrow
+		display: block
 		width: 24px
 		margin-left: auto
 		margin-right: auto
 		& + canvas
 
-			position: absolute
-			top: -97px
-			left: calc(50% - 373px)
+			
 
 .logo
 	display: inline-block
@@ -234,36 +279,36 @@ a
 	height: 44px
 	position: relative
 	margin-right: 13px
-	left: 40px
+	// left: 40px
 	transition: .3s 1s
 	// transition-delay: 1.2s
 	&.start
-		transform: translateX(-40px)
+		// transform: translateX(-40px)
 		.logo
 
 			&__box
-				&:nth-of-type(2), &:nth-of-type(4), &:nth-of-type(5), &:nth-of-type(5), &:nth-of-type(6)
-					transform: translateX(0)
-				&:nth-of-type(7), &:nth-of-type(8), &:nth-of-type(9), &:nth-of-type(10)
-					transform: translateX(0)
-				&:nth-of-type(16), &:nth-of-type(17), &:nth-of-type(18), &:nth-of-type(19), &:nth-of-type(20)
-					transform: translateX(0)
+				// &:nth-of-type(2), &:nth-of-type(4), &:nth-of-type(5), &:nth-of-type(5), &:nth-of-type(6)
+				// 	transform: translateX(0)
+				// &:nth-of-type(7), &:nth-of-type(8), &:nth-of-type(9), &:nth-of-type(10)
+				// 	transform: translateX(0)
+				// &:nth-of-type(16), &:nth-of-type(17), &:nth-of-type(18), &:nth-of-type(19), &:nth-of-type(20)
+				// 	transform: translateX(0)
 		+ .prelouder__text
 			opacity: 1
-			transition-delay: 1.2s
+			transition-delay: .8s
 	&__box
 		position: absolute
 		display: block
 		width: 8px
 		height: 8px
-		background: white
+		background: #16181c
 		transition: .3s .2s
-		&:nth-of-type(2), &:nth-of-type(4), &:nth-of-type(5), &:nth-of-type(5), &:nth-of-type(6)
-			transform: translateX(18px)
-		&:nth-of-type(7), &:nth-of-type(8), &:nth-of-type(9), &:nth-of-type(10)
-			transform: translateX(9px)
-		&:nth-of-type(16), &:nth-of-type(17), &:nth-of-type(18), &:nth-of-type(19), &:nth-of-type(20)
-			transform: translateX(-9px)
+		// &:nth-of-type(2), &:nth-of-type(4), &:nth-of-type(5), &:nth-of-type(5), &:nth-of-type(6)
+		// 	transform: translateX(18px)
+		// &:nth-of-type(7), &:nth-of-type(8), &:nth-of-type(9), &:nth-of-type(10)
+		// 	transform: translateX(9px)
+		// &:nth-of-type(16), &:nth-of-type(17), &:nth-of-type(18), &:nth-of-type(19), &:nth-of-type(20)
+		// 	transform: translateX(-9px)
 		&:nth-of-type(1)
 			top: 0
 			left: 0
@@ -271,8 +316,9 @@ a
 			top: 0
 			left: 9px
 		&:nth-of-type(3)
-			top: 0
+			top: 18px
 			right: 0
+			background: #2b35bc
 		&:nth-of-type(4)
 			top: 9px
 			left: 0
@@ -359,6 +405,7 @@ a
 				a
 					&:after
 						width: 100%
+						height: 3px
 		a
 			padding-bottom: 4px
 			position: relative
@@ -366,14 +413,15 @@ a
 				position: absolute
 				content: ''
 				width: 0
-				height: 3px
+				height: 10px
 				background: white
 				left: 0
-				bottom: -4px
-				transition: .3s
+				top: 24px
+				transition: .2s
 			&:hover
 				&:after
 					width: 100%
+					height: 3px
 	&__button
 		float: right
 		margin-top: 2px
@@ -451,6 +499,9 @@ a
 
 
 .apps
+	.slick-slide
+		a
+			outline: none !important
 	&__title
 		margin-top: 80px
 		text-align: center
@@ -465,6 +516,10 @@ a
 		padding-right: 100px
 		.slick-arrow
 			top: 35px
+			filter: grayscale(70%)
+			&:hover
+				filter: grayscale(0%)
+				transition: .3s
 			&:before
 				display: none
 		.slick-prev
@@ -497,6 +552,8 @@ a
 		margin-left: auto
 		margin-right: auto
 		transition: .3s
+		width: 74px
+		border-radius: 20px
 
 
 
@@ -533,6 +590,7 @@ a
 		margin-bottom: 17px
 	&__img
 		float: right
+		zoom: .9
 	&_full
 		text-align: center
 		.product
@@ -755,6 +813,7 @@ a
 	&__list
 		margin-bottom: 90px
 	&__item
+		display: block
 		height: 200px
 		border: 1px solid transparent
 		transition: .3s
@@ -776,12 +835,28 @@ a
 			background: url('../img/bg/do-left.png') no-repeat left 1070px, url('../img/bg/do-right-full.png') no-repeat right 0
 
 	
-
+.services, .technologies
+	padding-top: 100px
 
 .technologies
 	position: relative
 	margin-bottom: 65px
 	left: -4px
+	.slick-arrow
+		width: 76px
+		height: 76px
+		line-height: 76px
+		background: rgba(0,0,0,.2)
+		border-radius: 50%
+		transition: .3s
+		&:hover
+			background: rgba(0,0,0,.8)
+		&:before
+			display: none
+	.slick-prev
+		left: -(76px + 155px)
+	.slick-next
+		right: -(76px + 155px)
 	&_start
 		.technologies
 			&__item
@@ -790,12 +865,14 @@ a
 		font-size: 46px
 		margin-bottom: 45px
 		text-align: center
-	&__list
+	&__slider
 		width: 680px
-		height: 430px
 		position: relative
 		margin-left: auto
 		margin-right: auto
+	&__list
+		position: relative
+		height: 430px
 	&__item
 		display: block
 		position: absolute
@@ -808,6 +885,7 @@ a
 		cursor: pointer
 		transition: .5s
 		img
+			display: inline-block !important
 			transition: .5s
 			vertical-align: middle
 		&:nth-of-type(1)
@@ -921,7 +999,7 @@ a
 	width: 100%
 	height: 100%
 	img
-		transition: .1s
+		transition: .8s
 	&:before, &:after
 		z-index: -2
 		content: ''
@@ -932,20 +1010,30 @@ a
 		transition: 1s
 		// background: #2b35bc
 		// background: #384FCE
-		background: #ef8f31
+		background: #EDEDED
 	&:before
 		left: 0
 	&:after
 		right: 0
 	&__wrap
+		opacity: 0
 		position: absolute
 		top: calc(50% - 24px)
 		left: calc(50% - 56px)
-		transition: .3s
+		transition: 1s
+		transform: translateX(-100px)
+		&.start
+			opacity: 1
+			transform: translateX(0px)
+			.logo
+				&__box
+					&:nth-of-type(3)
+						transition: .5s 1.2s
+						transform: translateY(-18px)
 	&__icon
 		margin-right: 13px
 	&__text
-		opacity: 0
+		// opacity: 0
 		transition: .8s
 	
 

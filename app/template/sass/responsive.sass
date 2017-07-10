@@ -2,13 +2,6 @@
 	.header_portfolio
 		.header__content
 			// padding-top: 0
-		.header__img
-			width: 100%
-			max-width: 400px
-			margin-top: 150px
-			img
-				width: 100%
-				right: 0
 	.product_img-bottom
 		.product
 			&__content
@@ -28,14 +21,32 @@
 		.panel
 			.container
 				padding-top: 0
+		&_main
+			.header
+				&__logo
+					margin-top: 10%
+				&__title
+					margin-top: 150px
+					margin-bottom: 8%
+				&__button
+					margin-bottom: 10%
 	.header_main
 		.header__title
 			margin-top: 200px
-	.header__portfolio
-		&__title
-			margin-top: 250px
-			// font-size: 30px
-			// margin-top: 30px
+	.header_services
+		.services__title
+			// margin-top: 150px
+	.header_portfolio
+		.header__img
+			float: right
+			position: relative
+			bottom: 0
+			right: 0
+			max-width: 450px
+			bottom: 0
+			margin-top: 100px
+			img
+				width: 100%
 	.header_technologies
 		.header__title
 			margin-top: 0
@@ -45,7 +56,7 @@
 		.container
 			padding-bottom: 20px
 	.technologies
-		margin-top: 100px
+		padding-top: 100px
 @media screen and (max-height: 720px)
 	.header
 		&__title
@@ -78,6 +89,8 @@
 			&__wrap
 				margin-bottom: 10px
 @media screen and (max-width: 1175px)
+	.technologies .slick-arrow
+		display: none !important
 	#fp-nav
 		display: none
 	.product
@@ -320,12 +333,25 @@
 
 		&__button
 			margin-bottom: 30px
+	.header
+		&_main
+			.header
+				&__logo
+					display: none
+				&__title
+					width: 100%
+					span
+						display: inline
+						width: 100% !important
+						left: 0 !important
 	.header_services
 		padding-bottom: 20px
 	.header_main .header__title
 		margin-top: 0
 	.services__list
 		margin-bottom: 30px
+	.technologies, .services
+		padding-top: 0
 	.panel
 		position: relative
 		top: auto
@@ -393,6 +419,8 @@
 		.slick-dots
 			width: calc(100% - 60px)
 	.technologies
+		&__slider
+			width: auto
 		&__list
 			width: auto
 			height: auto

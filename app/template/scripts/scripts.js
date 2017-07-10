@@ -1,14 +1,14 @@
 $(document).ready(function($) {
 	
 	setTimeout(function(){
-		$('body').addClass('loaded');
-	}, 2000);
+		$('.prelouder__wrap').fadeOut(500);
+	}, 1700);
 
 	setTimeout(function(){
-		$('.prelouder').hide();
-	}, 2700);
+		$('.prelouder').fadeOut(500);
+	}, 2500);
 
-	$('.logo').addClass('start');
+	$('.prelouder__wrap').addClass('start');
 
 
 
@@ -31,7 +31,10 @@ $(document).ready(function($) {
 		}]
 	});
 
-
+	$('.technologies__slider').slick({
+		prevArrow: '<button type="button" class="slick-prev slick-arrow"><i class="icon icon-arrow-big-left"></i></button>',
+		nextArrow: '<button type="button" class="slick-next slick-arrow"><i class="icon icon-arrow-big-right"></i></button>'
+	});
 
 
 	$('#fullpage').fullpage({
@@ -125,7 +128,7 @@ $(document).ready(function($) {
 	});
 
 
-	up.click(function() {
+	$("#up, .header__arrow, .services__item").click(function() {
 		var elementClick = $(this).attr("href")
 		var destination = $(elementClick).offset().top;
 		jQuery("html:not(:animated),body:not(:animated)").animate({
@@ -137,7 +140,20 @@ $(document).ready(function($) {
 	$('.input-phone').mask("+7 (999) 999-99-99");
 
 
-	
+		
+	// $(".services__list .row").on("click","a", function (event) {
+	// 	//отменяем стандартную обработку нажатия по ссылке
+	// 	event.preventDefault();
+
+	// 	//забираем идентификатор бока с атрибута href
+	// 	var id  = $(this).attr('href'),
+
+	// 	//узнаем высоту от начала страницы до блока на который ссылается якорь
+	// 		top = $(id).offset().top;
+		
+	// 	//анимируем переход на расстояние - top за 1500 мс
+	// 	$('body,html').animate({scrollTop: top}, 1500);
+	// });
 
 
 	var navLinkContacts = $('.panel__nav li:last-of-type a'),
