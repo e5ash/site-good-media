@@ -1,5 +1,5 @@
 $(document).ready(function($) {
-	
+
 	setTimeout(function(){
 		$('.prelouder__wrap').fadeOut(500);
 	}, 1700);
@@ -9,8 +9,6 @@ $(document).ready(function($) {
 	}, 2500);
 
 	$('.prelouder__wrap').addClass('start');
-
-
 
 	$('.apps__list').slick({
 		slidesToShow: 6,
@@ -22,7 +20,7 @@ $(document).ready(function($) {
 			breakpoint: 730,
 			settings: {
 				slidesToShow: 3
-			}}, { 
+			}}, {
 			breakpoint: 390,
 			settings: {
 				slidesToShow: 2,
@@ -140,7 +138,7 @@ $(document).ready(function($) {
 	$('.input-phone').mask("+7 (999) 999-99-99");
 
 
-		
+
 	// $(".services__list .row").on("click","a", function (event) {
 	// 	//отменяем стандартную обработку нажатия по ссылке
 	// 	event.preventDefault();
@@ -150,7 +148,7 @@ $(document).ready(function($) {
 
 	// 	//узнаем высоту от начала страницы до блока на который ссылается якорь
 	// 		top = $(id).offset().top;
-		
+
 	// 	//анимируем переход на расстояние - top за 1500 мс
 	// 	$('body,html').animate({scrollTop: top}, 1500);
 	// });
@@ -163,8 +161,5 @@ $(document).ready(function($) {
 		contacts.fadeToggle(300);
 	});
 
-	
+
 });
-
-
-

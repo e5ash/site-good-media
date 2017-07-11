@@ -194,9 +194,13 @@
   .input {
     padding-top: 15px;
     padding-bottom: 15px;
-    line-height: normal; } }
+    line-height: normal; }
+  .product_pool video {
+    height: 295px; } }
 
 @media screen and (max-width: 1075px) {
+  .header_portfolio .header__img {
+    display: none; }
   .panel__lang-switch {
     margin-right: 10%; }
   .company__text br {
@@ -400,6 +404,10 @@
       .technologies__item:nth-of-type(9) img {
         width: 70px; }
   .header__logo {
+    display: none; } }
+
+@media screen and (max-width: 695px) {
+  .product__img video {
     display: none; } }
 
 @media screen and (max-width: 620px) {

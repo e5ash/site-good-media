@@ -509,7 +509,7 @@ a {
   .header__logo {
     text-align: center;
     overflow: visible;
-    margin-bottom: -70px; }
+    margin-bottom: -105px; }
     .header__logo + .header__title {
       margin-top: 0 !important;
       width: 275px;
@@ -804,6 +804,36 @@ a {
   .product .container {
     padding-top: 20px;
     padding-bottom: 20px; }
+  .product_yerevanmall video {
+    top: 74px;
+    left: -webkit-calc(50% - 144px);
+    left: calc(50% - 144px);
+    width: 290px;
+    height: 510px; }
+  .product_joinme video {
+    top: 70px;
+    left: -webkit-calc(50% - 144px);
+    left: calc(50% - 144px);
+    width: 290px;
+    height: 515px; }
+  .product_pool video {
+    top: 12px;
+    width: 800px;
+    height: 336px;
+    left: -webkit-calc(50% - 400px);
+    left: calc(50% - 400px); }
+  .product_yerevan video {
+    width: 312px;
+    height: 578px;
+    top: 27px;
+    left: -webkit-calc(50% - 157px);
+    left: calc(50% - 157px); }
+  .product_megalist video {
+    top: 70px;
+    left: -webkit-calc(50% - 144px);
+    left: calc(50% - 144px);
+    width: 290px;
+    height: 515px; }
   .product__button {
     max-width: 268px;
     padding-left: 0;
@@ -830,8 +860,11 @@ a {
     line-height: 32px;
     margin-bottom: 17px; }
   .product__img {
+    position: relative;
     float: right;
     zoom: .9; }
+    .product__img video {
+      position: absolute; }
   .product_full {
     text-align: center; }
     .product_full .product__content, .product_full .product__img {
