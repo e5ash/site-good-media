@@ -29,10 +29,10 @@ $(document).ready(function($) {
 		}]
 	});
 
-	$('.technologies__slider').slick({
-		prevArrow: '<button type="button" class="slick-prev slick-arrow"><i class="icon icon-arrow-big-left"></i></button>',
-		nextArrow: '<button type="button" class="slick-next slick-arrow"><i class="icon icon-arrow-big-right"></i></button>'
-	});
+	// $('.technologies__slider').slick({
+	// 	prevArrow: '<button type="button" class="slick-prev slick-arrow"><i class="icon icon-arrow-big-left"></i></button>',
+	// 	nextArrow: '<button type="button" class="slick-next slick-arrow"><i class="icon icon-arrow-big-right"></i></button>'
+	// });
 
 
 	$('#fullpage').fullpage({
@@ -46,67 +46,55 @@ $(document).ready(function($) {
 
 
 
-	// $('.popup__button').click(function() {
-	// 	parent.jQuery.fancybox.getInstance().close();
-	// 	$.fancybox.open({
-	// 		src  : '#popup-thanks',
-	// 		type : 'inline'
-	// 	});
-	// });
-
-
-	// $('.order__button').click(function() {
-	// 	$.fancybox.open({
-	// 		src  : '#popup-thanks',
-	// 		type : 'inline'
-	// 	});
-	// });
 
 
 
 	$('.popup form').submit(function() {
 		var inputRequred = $(this).find('.input-requred');
 			inputRequredValue = inputRequred.val();
-		$.ajax({
-			type: "POST",
-			url: "/order.php",
-			data: $(this).serialize()
-		}).done(function() {
+
 			if (inputRequredValue == "" || inputRequredValue == null) {
 				inputRequred.addClass('input-error');
 			} else {
-				inputRequred.removeClass('input-error');
-				parent.jQuery.fancybox.getInstance().close();
-				$.fancybox.open({
-					src  : '#popup-thanks',
-					type : 'inline'
-				});
+				$.ajax({
+					type: "POST",
+					url: "/order.php",
+					data: $(this).serialize()
+				}).done(function() {
+					inputRequred.removeClass('input-error');
+					parent.jQuery.fancybox.getInstance().close();
+					$.fancybox.open({
+						src  : '#popup-thanks',
+						type : 'inline'
+					});
+				})
 			}
+			return false;
 		});
-		return false;
-	});
 
-	$('.order form').submit(function() {
-		var inputRequred = $(this).find('.input-requred');
-			inputRequredValue = inputRequred.val();
-		$.ajax({
-			type: "POST",
-			url: "/order.php",
-			data: $(this).serialize()
-		}).done(function() {
-			if (inputRequredValue == "" || inputRequredValue == null) {
-				inputRequred.addClass('input-error');
-			} else {
-				inputRequred.removeClass('input-error');
-				$.fancybox.open({
-					src  : '#popup-thanks',
-					type : 'inline'
-				});
-			}
-		});
-		return false;
-	});
 
+		
+		$('.order form').submit(function() {
+			var inputRequred = $(this).find('.input-requred');
+				inputRequredValue = inputRequred.val();
+
+				if (inputRequredValue == "" || inputRequredValue == null) {
+					inputRequred.addClass('input-error');
+				} else {
+					$.ajax({
+						type: "POST",
+						url: "/order.php",
+						data: $(this).serialize()
+					}).done(function() {
+						inputRequred.removeClass('input-error');
+						$.fancybox.open({
+							src  : '#popup-thanks',
+							type : 'inline'
+						});
+					})
+				}
+				return false;
+			});
 
 
 	var nav = $('#fp-nav'),
@@ -135,7 +123,7 @@ $(document).ready(function($) {
 		return false;
 	});
 
-	$('.input-phone').mask("+7 (999) 999-99-99");
+	// $('.input-phone').mask("+999999999999");
 
 
 

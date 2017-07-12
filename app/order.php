@@ -17,6 +17,7 @@ if ($email) {
 }
 
 $to = "levic.vlad@mail.ru";
+// $to = "e5ash.bro@gmail.com";
 $headers = "Content-type: text/plain; charset = UTF-8";
 $subject = "Новый заказ с сайта";
 $send = mail($to, $subject, $message, $headers);

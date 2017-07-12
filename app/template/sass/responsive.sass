@@ -37,16 +37,16 @@
 		.services__title
 			// margin-top: 150px
 	.header_portfolio
-		.header__img
-			float: right
-			position: relative
-			bottom: 0
-			right: 0
-			max-width: 450px
-			bottom: 0
-			margin-top: 100px
-			img
-				width: 100%
+		// .header__img
+		// 	float: right
+		// 	position: relative
+		// 	bottom: 0
+		// 	right: 0
+		// 	max-width: 450px
+		// 	bottom: 0
+		// 	margin-top: 100px
+		// 	img
+		// 		width: 100%
 	.header_technologies
 		.header__title
 			margin-top: 0
@@ -57,6 +57,16 @@
 			padding-bottom: 20px
 	.technologies
 		padding-top: 100px
+	.header_portfolio
+		.header__img
+			position: relative
+			bottom: auto
+			margin-top: 100px
+			max-width: 500px
+			right: -100px
+			float: right
+			img
+				width: 100%
 @media screen and (max-height: 720px)
 	.header
 		&__title
@@ -88,6 +98,10 @@
 		.icon
 			&__wrap
 				margin-bottom: 10px
+@media screen and (max-width: 1350px)
+	.header_portfolio
+		.header__img
+			right: 0
 @media screen and (max-width: 1175px)
 	.technologies .slick-arrow
 		display: none !important
